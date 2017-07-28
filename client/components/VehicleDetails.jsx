@@ -21,7 +21,7 @@ export default function (props) {
   var name = props.match.params.name
 
   return (
-    <div className="container">
+    <div className="vehicle">
       <h1> this is {name} {vehicle}</h1>
       <div>
         {renderDescription(vehicle, name)}

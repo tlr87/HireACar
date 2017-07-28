@@ -15,7 +15,7 @@ export default function (props) {
   var vehicle = props.match.params.vehicle
 
   return (
-    <div className="container">
+    <div className="types">
       <h1> Choose the right {vehicle} for you! </h1>
       <ul>
         {renderVehiclesNames(vehicle)}
