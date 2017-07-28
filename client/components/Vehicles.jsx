@@ -15,7 +15,7 @@ export default function (props) {
 
   return (
     <div className="nav container">
-      <h1> List of vehicles </h1>
+      <h1> List of unicorn vehicles </h1>
       <ul>
         {renderVehicles(vehicles)}
       </ul>
