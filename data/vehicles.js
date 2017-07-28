@@ -28,7 +28,7 @@ const vehicles = {
       image: 'https://i5.walmartimages.com/asr/56647e0c-980f-4ad6-af44-0edabb4ce4d5_1.bfaaf3b4f0b61e9e7a3fb26cd0cf581e.jpeg'
     }
   ],
-  motorbikes: [
+  motorbike: [
     {
       name: 'sports bikes',
       description: 'Honda',
