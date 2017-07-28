@@ -16,7 +16,7 @@ const renderDescription = (vehicle, name) => {
 }
 
 export default function (props) {
-console.log(props);
+
   var vehicle = props.match.params.vehicle
   var name = props.match.params.name
 
@@ -26,6 +26,7 @@ console.log(props);
       <div>
         {renderDescription(vehicle, name)}
         <Link to={"/list/" + vehicle}> back to list</Link>
+      {/*  <Link to={"/order"}>book a car</Link> */}
       </div>
     </div>
   )
