@@ -4,7 +4,7 @@ import Home from './Home'
 import Vehicles from './Vehicles'
 import VehicleTypes from './VehicleTypes'
 import VehicleDetails from './VehicleDetails'
-import CarForm from './CarForm' 
+import CarForm from './CarForm'
 
 const App = () => {
   return (
@@ -12,8 +12,9 @@ const App = () => {
     <h1>Unicorn car rental!</h1>
         <Router>
           <div>
-            <Route exact path = "/" component={Home} />
-            <Route path = "/" component={Vehicles} />
+              <Route exact path = "/" component={Home} />
+            <Route exact path = "/" component={Vehicles} />
+          
             <Route path="/list/:vehicle" component={VehicleTypes} />
             <Route path="/vehicle/:vehicle/:name" component={VehicleDetails} />
              <Route path="/order" component={CarForm} />

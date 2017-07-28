@@ -20,6 +20,7 @@ export default function (props) {
       <ul>
         {renderVehiclesNames(vehicle)}
       </ul>
+      <Link to={"/"}>Home</Link>
     </div>
   )
 }
