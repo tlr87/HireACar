@@ -1,0 +1,12 @@
+body{
+font-family: sans-serif;
+}
+
+.container{
+border-style: solid;
+width: 45%;
+}
+
+.nav{
+  float:right;
+}
