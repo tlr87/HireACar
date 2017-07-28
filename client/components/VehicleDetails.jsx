@@ -22,6 +22,7 @@ export default function (props) {
 
   return (
     <div className="container">
+
       <h1> this is {name} {vehicle}</h1>
       <div>
         {renderDescription(vehicle, name)}

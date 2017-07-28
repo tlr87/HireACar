@@ -1,5 +1,6 @@
 import React from 'react'
 import vehicles from '../../data/vehicles'
+import {Link} from 'react-router-dom'
 
 export default class AddRetal extends React.Component {
   constructor(props) {
@@ -35,6 +36,7 @@ export default class AddRetal extends React.Component {
   }
   render() {
     return (
+      <div>
       <form onSubmit={this.submitRental}>
         <select name="vehicle" onChange={(e) => this.updateNewRentalDetails(e)}>
           <option selected disabled>Type of vehicle</option>
@@ -48,6 +50,9 @@ export default class AddRetal extends React.Component {
         <input type="submit" />
         <p>{this.state.newRental.name}</p>
       </form>
+        <Link to={"/"}>Home</Link>
+        </div>
+
     )
   }
 }
