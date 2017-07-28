@@ -3,13 +3,15 @@ import {Link} from 'react-router-dom'
 import vehicles from "../../data/vehicles.js"
 
 const renderDescription = (vehicle, name) => {
-
+  let singleVehicle = vehicles[vehicle].find(function(elem) {
+    return (elem.name === name)
+  })
   return (
-    <p> {
-    vehicles[vehicle].find(function(elem) {
-      return (elem.name === name)
-    }).description
-    }</p>
+    <div>
+      <p>{singleVehicle.description}</p>
+      <img src={singleVehicle.image} />
+    </div>
+
   )
 }
 
@@ -20,7 +22,7 @@ console.log(props);
 
   return (
     <div className="container">
-      <h1> this is {name} </h1>
+      <h1> this is {name} {vehicle}</h1>
       <div>
         {renderDescription(vehicle, name)}
         <Link to={"/list/" + vehicle}> back to list</Link>

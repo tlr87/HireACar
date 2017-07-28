@@ -16,7 +16,7 @@ export default function (props) {
 
   return (
     <div className="container">
-      <h1> this is {vehicle} </h1>
+      <h1> this is the {vehicle} </h1>
       <ul>
         {renderVehiclesNames(vehicle)}
       </ul>
