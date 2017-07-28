@@ -18,7 +18,7 @@ const App = () => {
             <Route path="/list/:vehicle" component={VehicleTypes} />
             <Route path="/vehicle/:vehicle/:name" component={VehicleDetails} />
           </div>
-          <CarForm />
+          
         </Router>
       </div>
   )
