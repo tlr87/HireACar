@@ -26,7 +26,8 @@ export default function (props) {
       <div>
         {renderDescription(vehicle, name)}
         <Link to={"/list/" + vehicle}> back to list</Link>
-      {/*  <Link to={"/order"}>book a car</Link> */}
+        <br />
+       <Link to={"/order"}>book a car</Link>
       </div>
     </div>
   )

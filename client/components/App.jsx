@@ -4,7 +4,7 @@ import Home from './Home'
 import Vehicles from './Vehicles'
 import VehicleTypes from './VehicleTypes'
 import VehicleDetails from './VehicleDetails'
-{/* import CarForm from './CarForm' */}
+import CarForm from './CarForm' 
 
 const App = () => {
   return (
@@ -16,7 +16,7 @@ const App = () => {
             <Route path = "/" component={Vehicles} />
             <Route path="/list/:vehicle" component={VehicleTypes} />
             <Route path="/vehicle/:vehicle/:name" component={VehicleDetails} />
-            {/* <Route path="/order" component={CarForm} /> */}
+             <Route path="/order" component={CarForm} />
           </div>
 
         </Router>

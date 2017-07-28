@@ -1,4 +1,5 @@
 import React from 'react'
+import vehicles from '../../data/vehicles'
 
 export default class AddRetal extends React.Component {
   constructor(props) {
@@ -14,30 +15,36 @@ export default class AddRetal extends React.Component {
     newRental[e.target.name] = e.target.value
     //do something
     this.setState({newRental: newRental})
+    console.log(this.state);
   }
   submitRental(e) {
     e.preventDefault()
-    console.log({e});
-    console.log("the cat is", this.state.newRental);
+  }
+  renderTypeSelect() {
+    const renderTypeOptions = (vehicleType) => {
+      return vehicles[vehicleType].map((typeOfVehicle, i) => {
+        return <option key={i}>{typeOfVehicle.name}</option>
+      })
+    }
+    if (this.state.newRental.vehicle) {
+      return  <select name="Type" onChange={(e) => this.updateNewRentalDetails(e)}>
+          <option selected disabled>Type</option>
+          {renderTypeOptions(this.state.newRental.vehicle)}
+        </select>
+    }
   }
   render() {
     return (
       <form onSubmit={this.submitRental}>
-        <select name="Vehicle" onChange={(e) => this.updateNewRentalDetails(e)}>
+        <select name="vehicle" onChange={(e) => this.updateNewRentalDetails(e)}>
           <option selected disabled>Type of vehicle</option>
-          <option value="Electric">Car</option>
-          <option value="Petrol">Motorbike</option>
-          <option value="Hybrid">Bike</option>
+          <option value="cars">Car</option>
+          <option value="motorbikes">Motorbike</option>
+          <option value="bikes">Bike</option>
         </select>
-        <input name="Car" placeholder="Car" type="text" onChange={(e) => this.updateNewRentalDetails(e)}/>
+        {this.renderTypeSelect()}
+        <input name="Name" placeholder="Name" type="text" onChange={(e) => this.updateNewRentalDetails(e)}/>
         <input name="Description" placeholder="Description" type="text" onChange={(e) => this.updateNewRentalDetails(e)}/>
-        <input name="Colour" placeholder="Colour" type="text" onChange={(e) => this.updateNewRentalDetails(e)}/>
-        <select name="Type" onChange={(e) => this.updateNewRentalDetails(e)}>
-          <option selected disabled>Type of Car</option>
-          <option value="Electric">Electric</option>
-          <option value="Petrol">Petrol</option>
-          <option value="Hybrid">Petrol</option>
-        </select>
         <input type="submit" />
         <p>{this.state.newRental.name}</p>
       </form>
